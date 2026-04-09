@@ -1,0 +1,9 @@
+Script started on Thu Apr  9 14:47:12 2026
+]0;nathanpl@r1n01.darwin:~/CISC372_picProject[?1034h[nathanpl@r1n01 CISC372_picProject]$ ./image pic1.jpg edge
+Took 6 seconds
+]0;nathanpl@r1n01.darwin:~/CISC372_picProject[nathanpl@r1n01 CISC372_picProject]$ ./image_openmp pic1.jpg edge
+Took 8 seconds
+]0;nathanpl@r1n01.darwin:~/CISC372_picProject[nathanpl@r1n01 CISC372_picProject]$ exit
+exit
+
+Script done on Thu Apr  9 14:48:16 2026
