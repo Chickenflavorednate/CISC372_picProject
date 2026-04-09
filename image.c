@@ -91,7 +91,10 @@ void convolute(Image* srcImage,Image* destImage,Matrix algorithm){
     for(int i = 0; i < num_threads; i++) {
         threadData[i].srcImage = srcImage;
         threadData[i].destImage = destImage;
-        memcpy(threadData[i].algorithm, algorithm, sizeof(Matrix)); // threadData[i].algorithm = algorithm;
+        memcpy(threadData[i].algorithm, algorithm, sizeof(Matrix)); // threadData[i].algorithm = algorithm; 
+        // I used chatgpt here^^^^^ to figure out why this line wasn't working and it 
+        // explained to me that i was trying to assign an array with a = and that isn;t allowed in c, so it told me I had to use
+        // memcpy to copy the bytes directly into the array instead
         threadData[i].startRow = i * rows_per_thread;
         threadData[i].endRow = (i == num_threads - 1) ? srcImage->height : (i + 1) * rows_per_thread;
         pthread_create(&threads[i], NULL, thread_convolute, &threadData[i]);
